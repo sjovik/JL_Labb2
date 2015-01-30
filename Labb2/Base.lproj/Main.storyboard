@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wrD-zg-Ndc">
+                                <rect key="frame" x="178" y="438" width="126" height="29"/>
+                                <segments>
+                                    <segment title="SciFi"/>
+                                    <segment title="Fantasy"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blod" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-BA-5F4">
+                                <rect key="frame" x="73" y="403" width="41" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="PBj-X5-rUw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="KS1-4H-Mup">
+                                <rect key="frame" x="16" y="437" width="94" height="29"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Längd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAH-oX-JLw">
+                                <rect key="frame" x="118" y="443" width="45" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="msK-u6-rET"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8kx-uG-Zo7">
+                                <rect key="frame" x="16" y="396" width="51" height="31"/>
+                                <color key="onTintColor" red="0.29540375003223301" green="0.59056105667849945" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxs-Bf-Jhq">
+                                <rect key="frame" x="250" y="396" width="54" height="30"/>
+                                <state key="normal" title="Berätta!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newStoryButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hD6-im-Ub6"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tryck på berätta för att få en ny saga." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-8T-uIN">
+                                <rect key="frame" x="16" y="20" width="288" height="368"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yxs-Bf-Jhq" firstAttribute="top" secondItem="wrD-zg-Ndc" secondAttribute="bottom" constant="-70" id="2cO-tu-dL5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yxs-Bf-Jhq" secondAttribute="bottom" constant="54" id="4w7-B5-EmW"/>
+                            <constraint firstItem="KS1-4H-Mup" firstAttribute="centerY" secondItem="aAH-oX-JLw" secondAttribute="centerY" id="4wX-3M-r19"/>
+                            <constraint firstItem="WpM-BA-5F4" firstAttribute="baseline" secondItem="yxs-Bf-Jhq" secondAttribute="firstBaseline" id="53Q-ak-I1r"/>
+                            <constraint firstItem="aAH-oX-JLw" firstAttribute="leading" secondItem="KS1-4H-Mup" secondAttribute="trailing" constant="8" symbolic="YES" id="5Wg-1y-2AM"/>
+                            <constraint firstItem="8kx-uG-Zo7" firstAttribute="leading" secondItem="KS1-4H-Mup" secondAttribute="leading" id="7SZ-6x-9Y0"/>
+                            <constraint firstItem="wrD-zg-Ndc" firstAttribute="leading" secondItem="aAH-oX-JLw" secondAttribute="trailing" constant="15" id="UlU-B1-A8e"/>
+                            <constraint firstItem="wrD-zg-Ndc" firstAttribute="bottom" secondItem="KS1-4H-Mup" secondAttribute="bottom" id="X8g-nH-bRc"/>
+                            <constraint firstItem="yxs-Bf-Jhq" firstAttribute="leading" secondItem="aAH-oX-JLw" secondAttribute="trailing" constant="87" id="XZ6-tv-Rer"/>
+                            <constraint firstItem="8kx-uG-Zo7" firstAttribute="top" secondItem="yxs-Bf-Jhq" secondAttribute="top" id="e36-by-LPm"/>
+                            <constraint firstAttribute="bottom" secondItem="aAH-oX-JLw" secondAttribute="bottom" constant="20" symbolic="YES" id="j5s-V9-8aU"/>
+                            <constraint firstItem="WpM-BA-5F4" firstAttribute="baseline" secondItem="yxs-Bf-Jhq" secondAttribute="baseline" id="jDz-zW-Flf"/>
+                            <constraint firstItem="WpM-BA-5F4" firstAttribute="centerY" secondItem="8kx-uG-Zo7" secondAttribute="centerY" id="mS5-qF-RGM"/>
+                            <constraint firstItem="yxs-Bf-Jhq" firstAttribute="trailing" secondItem="wrD-zg-Ndc" secondAttribute="trailing" id="p9L-SW-FWw"/>
+                            <constraint firstItem="WpM-BA-5F4" firstAttribute="leading" secondItem="8kx-uG-Zo7" secondAttribute="trailing" constant="8" symbolic="YES" id="uh0-KZ-qTN"/>
+                            <constraint firstItem="yxs-Bf-Jhq" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vuV-rU-aBv"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bloodOnSwitch" destination="8kx-uG-Zo7" id="Aiv-fu-vuq"/>
+                        <outlet property="storyLengthStepper" destination="KS1-4H-Mup" id="kbQ-yf-etf"/>
+                        <outlet property="storyModeSwitch" destination="wrD-zg-Ndc" id="Evi-Tn-I4M"/>
+                        <outlet property="storyText" destination="bLR-8T-uIN" id="dK6-Mh-1CB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
